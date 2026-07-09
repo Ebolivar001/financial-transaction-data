@@ -1,12 +1,12 @@
 # Financial Data Ingestion & Canonical Modeling
 
-Snowflake exercise: ingest transaction data from three clients (XML, JSON, CSV), model it into one canonical structure, and handle the data quality issues along the way. Everything below is SQL — no Python, no external ETL tool.
+Snowflake exercise: ingest transaction data from three clients (XML, JSON, CSV), model it into one canonical structure, and handle the data quality issues along the way. Everything below is SQL
 
 ## What's actually in the source data
 
-The exercise doc says "three sample files," but the real folder has 15:
+The sample data is organized in the following order:
 
-- **Client A** — transactions as XML, fragmented across 7 files (`ClientA_Transactions_1.xml` ... `_7.xml`, one of them saved as `.txt` by mistake). Plus 3 loose CSVs for customers/orders/products.
+- **Client A** — transactions as XML, fragmented across 7 files (`ClientA_Transactions_1.xml` ... `_7.xml`, one of them saved as `.txt`) and 3CSVs for customers/orders/products.
 - **"Client B" folder** — actually Client C. The folder name is wrong; every file inside it (the JSON and its 4 CSVs) identifies itself as `clientC_*` in its own content. I went with what the files say about themselves, not the folder name.
 
 Full breakdown of anomalies and how each was handled is in [`notes.md`](./notes.md).
