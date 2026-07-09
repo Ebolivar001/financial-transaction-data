@@ -1,7 +1,3 @@
--- ============================================================
--- BRONZE -> SILVER: customers
--- ============================================================
-
 truncate table financial_ingestion.silver.customers;
 
 insert into financial_ingestion.silver.customers
