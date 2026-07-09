@@ -1,7 +1,3 @@
--- ============================================================
--- BRONZE -> SILVER: payments (client C only)
--- ============================================================
-
 truncate table financial_ingestion.silver.payments;
 
 insert into financial_ingestion.silver.payments
